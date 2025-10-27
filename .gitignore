@@ -1,0 +1,40 @@
+### ARQUIVOS DE AMBIENTE E CREDENCIAIS ###
+# Nunca versione arquivos com senhas ou segredos!
+.env
+.env.*.local
+.env.local
+
+### DADOS PERSISTENTES E LOGS DO DOCKER ###
+# É importante ignorar esses diretórios para não versionar
+# o banco de dados, dashboards e outras configurações de execução.
+grafana/data/
+influxdb_data/
+mosquitto_data/
+mosquitto/log/
+
+### DEPENDÊNCIAS DE PROJETOS (NODE.JS / GO) ###
+# Dependências do Node.js (ex: dentro dos plugins do Grafana)
+**/node_modules/
+**/pnpm-lock.yaml
+
+# Dependências do Go
+**/vendor/
+
+### ARQUIVOS DE BUILD E BINÁRIOS ###
+# Artefatos de build comuns
+**/dist/
+**/bin/
+*.exe
+*.out
+*.so
+*.dll
+
+### ARQUIVOS DE LOG E CACHE ###
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+### ARQUIVOS DE SISTEMA OPERACIONAL ###
+.DS_Store
+Thumbs.db
