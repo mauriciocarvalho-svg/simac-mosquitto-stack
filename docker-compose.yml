@@ -18,6 +18,7 @@ services:
       - "9001:9001"
     volumes:
       - ./mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - ./mosquitto/config/mosquitto.passwd:/mosquitto/config/mosquitto.passwd
       - mosquitto_data:/mosquitto/data
     environment:
       - TZ=America/Sao_Paulo
@@ -55,6 +56,8 @@ services:
       - INFLUX_TOKEN=${INFLUXDB_TOKEN}
       - INFLUXDB_ORG=${INFLUXDB_ORG}
       - INFLUXDB_BUCKET=${INFLUXDB_BUCKET}
+      - MQTT_USER=${MQTT_USER}
+      - MQTT_PASSWORD=${MQTT_PASSWORD}
     volumes:
       - ./mosquitto/config/telegraf.conf:/etc/telegraf/telegraf.conf:ro
     depends_on:
