@@ -7,7 +7,6 @@
 ### DADOS PERSISTENTES E LOGS DO DOCKER ###
 # É importante ignorar esses diretórios para não versionar
 # o banco de dados, dashboards e outras configurações de execução.
-grafana/data/
 influxdb_data/
 mosquitto_data/
 mosquitto/log/
